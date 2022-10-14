@@ -37,3 +37,10 @@ def login(request):
     'form' : form,
   }
   return render(request, 'accounts/login.html', context)
+
+def detail(request, pk):
+  user_list = get_user_model().objects.get(pk=pk)
+  context = {
+    'user_list' : user_list,
+  }
+  return render(request, 'accounts/detail.html', context)
