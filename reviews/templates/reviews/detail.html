@@ -6,6 +6,7 @@
 <p>{{ review.created_at }} | {{ review.updated_at }}</p>
 <p>{{ review.movie_name }} | {{ review.grade }}점</p>
 <p>{{ review.content }}</p>
-
+<a href="{% url 'reviews:update' review.pk %}" class="btn btn-primary m-1">수정</a>
+<a href="" class="btn btn-danger m-1">삭제</a>
 
 {% endblock body %}
