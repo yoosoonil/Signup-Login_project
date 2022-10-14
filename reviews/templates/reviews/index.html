@@ -23,7 +23,7 @@
                 <th scope="col" colspan="2">리뷰수정/삭제</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody style="vertical-align:middle;">
               {% for user_ in users %}
                 <tr>
                   <td>
@@ -32,8 +32,8 @@
                   <a href="">
                     <td>{{ user_.movie_name }}</td>
                   </a>
-                  <td>{{ user_.grade }}점</td>
-                  <td>
+                  <td colspan="2">
+                    {{ user_.grade }}점
                     {% if user_.grade > 0 and user_.grade <= 0.5 %}
                       <p class='m-0'>
                         <span>🌗🌑🌑🌑🌑</span></p>

@@ -16,7 +16,7 @@
         {% bootstrap_form form %}
       <div class="d-flex justify-content-end">
         <button class="btn btn-dark m-1" type="submit">등록</button>
-        <button class="btn btn-danger m-1" type="reset">취소</button>
+        <a class="btn btn-danger m-1" href="{% url 'reviews:index' %}">취소</a>
       </div>
       </form>
     </div>
