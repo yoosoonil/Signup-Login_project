@@ -48,3 +48,8 @@ def update(request, pk):
         'form':form,
     }
     return render(request, 'reviews/create.html', context)
+
+@login_required
+def delete(request, pk):
+    Review.objects.get(id=pk).delete()
+    return redirect('reviews:index')
