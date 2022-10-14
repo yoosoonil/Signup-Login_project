@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-black">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary text-bold" href="{% url 'reviews:index' %}">페어프로젝트</a>
+        <a class="navbar-brand text-white text-bold" href="{% url 'reviews:index' %}">페어프로젝트</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +23,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if request.user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link text-black" href="{% url 'accounts:detail' user.pk %}">{{ request.user }}</a>
+                <a class="nav-link fw-bold" href="{% url 'accounts:detail' user.pk %}">{{ request.user }}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
