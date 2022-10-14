@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+
+<h1>{{ review.title }}</h1>
+<p>{{ review.created_at }} | {{ review.updated_at }}</p>
+<p>{{ review.movie_name }} | {{ review.grade }}점</p>
+<p>{{ review.content }}</p>
+
+
+{% endblock body %}
