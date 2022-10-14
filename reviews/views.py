@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import ReviewForm
 from .models import Review
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def create(request):
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -18,4 +20,8 @@ def create(request):
 
 
 def index(request):
-    return render(request, 'reviews/index.html')
+    users = Review.objects.all()
+    context = {
+        'users': users,
+    }
+    return render(request, 'reviews/index.html', context)

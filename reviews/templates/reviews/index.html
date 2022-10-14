@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <h1>리뷰 목록</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">리뷰명</th>
+        <th scope="col">영화제목</th>
+        <th scope="col">평점</th>
+        <th scope="col">리뷰생성시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user_ in users %}
+        <tr>
+          <td>{{ user_.title }}</td>
+          <a href="">
+            <td>{{ user_.movie_name }}</td>
+          </a>
+          <td>{{ user_.grade }}</td>
+          <td>{{ user_.created_at }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock body %}
