@@ -15,7 +15,7 @@
     <tbody>
       {% for user_ in users %}
         <tr>
-          <td>{{ user_.title }}</td>
+          <td><a href="{% url 'reviews:detail' user_.pk %}">{{ user_.title }}</a></td>
           <a href="">
             <td>{{ user_.movie_name }}</td>
           </a>
