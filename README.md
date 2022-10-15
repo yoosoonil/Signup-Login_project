@@ -38,5 +38,8 @@ def login(request):
   }
   return render(request, 'accounts/login.html', context)
 ```
+
+<hr>
+
 ## 📝Review
 - 전직장에서의 협업이란 `문서를 작성하고 이메일로 주고받는 것`이었다. 하지만 개발자 세상에서의 협업은 `git branch`라는 것을 사용하는 것이었다. **main(master)라는 큰 줄기를 기준으로 branch라는 곁가지를 생성**하고, 작업물을 main(mater)에 병합한다는 기능은 하면 할수록, 효율적인 협업툴이라고 느껴졌다. 개발자로 하루 빨리 취업하여 현업에서 `git branch`를 사용하였으면 좋겠다.
