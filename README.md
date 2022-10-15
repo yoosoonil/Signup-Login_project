@@ -1,6 +1,8 @@
 # 👨‍💻 Pair project(Signup-Login)
 > 일시 : 2022-10-15
+> 
 > 목표 : git branch를 활용해 3명이서 회원가입, 로그인 페이지 구현
+> 
 > 인원 : 유순일, 김현중, 신윤식
 
 ## 🎯Objective
