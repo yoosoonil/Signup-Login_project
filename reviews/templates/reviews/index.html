@@ -17,17 +17,17 @@
             <thead>
               <tr>
                 <th scope="col">리뷰명</th>
-                <th scope="col">영화제목</th>
+                <th scope="col">영화 제목</th>
                 <th scope="col" colspan="2">평점</th>
-                <th scope="col">리뷰생성시간</th>
-                <th scope="col" colspan="2">리뷰수정/삭제</th>
+                <th scope="col">작성일</th>
+                <th scope="col" colspan="2">수정/삭제</th>
               </tr>
             </thead>
             <tbody style="vertical-align:middle;">
               {% for user_ in users %}
                 <tr>
                   <td>
-                    <a href="{% url 'reviews:detail' user_.pk %}">{{ user_.title }}</a>
+                    <a class="text-decoration-none text-black" href="{% url 'reviews:detail' user_.pk %}">{{ user_.title }}</a>
                   </td>
                   <a href="">
                     <td>{{ user_.movie_name }}</td>
@@ -69,7 +69,7 @@
                         <span>🌕🌕🌕🌕🌕</span></p>
                     {% endif %}
                   </td>
-                  <td>{{ user_.created_at|date:"y년 m월 d일 H시 i분" }}</td>
+                  <td>{{ user_.created_at|date:'Y-m-d' }}</td>
                   <td>
                     <a class="btn btn-primary py-sm-1" href="{% url 'reviews:update' user_.pk %}" role="button">변경</a>
                   </td>
